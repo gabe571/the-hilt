@@ -30,6 +30,6 @@ class GuildsController < ApplicationController
     private
 
     def guild_params
-        params.require(:guild).permit(:name, :realm, :faction, :img_url, :description)
+        params.require(:guild).permit(:name, :realm, :faction, :img_url, :description, :guild_id)
     end
 end

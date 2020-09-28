@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2020_09_25_225915) do
   end
 
   create_table "guilds", force: :cascade do |t|
+    t.integer "guild_id"
     t.string "name"
     t.string "realm"
     t.string "faction"

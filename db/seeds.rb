@@ -11,10 +11,10 @@ Application.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 
     guilds = [
-    {name: "Jakes MDI Team", realm: "Illidan", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "keys keys keys"},
-    {name: "Team Reckless", realm: "Sargaras", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg"},
-    {name: "The Fighting 9th!", realm: "Rachet", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "MASS!"},
-    {name: "Ohms", realm: "Black Dragon Flight", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Music!"}
+    {guild_id: 1, name: "Jakes MDI Team", realm: "Illidan", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "keys keys keys"},
+    {guild_id: 2, name: "Team Reckless", realm: "Sargaras", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg"},
+    {guild_id: 3, name: "The Fighting 9th!", realm: "Rachet", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "MASS!"},
+    {guild_id: 4, name: "Ohms", realm: "Black Dragon Flight", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Music!"}
     ]
 
     guilds.each {|guild| Guild.create(guild)}
