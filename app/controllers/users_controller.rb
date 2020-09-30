@@ -6,8 +6,7 @@ class UsersController < ApplicationController
     end 
 
     def login
-        @user = User.find_by(username:params[:name])
-
+        @user = User.find_by(name:params[:name])
         if @user && @user.authenticate(params[:password])
             render json: @user
         else
