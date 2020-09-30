@@ -17,6 +17,7 @@ class GuildsController < ApplicationController
 
     def update
         guild = Guild.find(params[:id])
+        guild.update(guild_params)
         guild.save
         render json: guild
     end
@@ -30,6 +31,6 @@ class GuildsController < ApplicationController
     private
 
     def guild_params
-        params.require(:guild).permit(:name, :realm, :faction, :img_url, :description, :guild_id)
+        params.require(:guild).permit(:name, :realm, :faction, :img_url, :description, :id)
     end
 end
