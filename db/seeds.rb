@@ -11,10 +11,13 @@ Application.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 
     guilds = [
-    {name: "Jakes MDI Team", realm: "Illidan", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "keys keys keys"},
-    {name: "Team Reckless", realm: "Sargaras", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg"},
-    {name: "The Fighting 9th!", realm: "Rachet", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "MASS!"},
-    {name: "Ohms", realm: "Black Dragon Flight", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Music!"}
+    {name: "Guild 1", realm: "Illidan", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+    {name: "Guild 2", realm: "Sargeras", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+    {name: "Guild 1", realm: "Icecrown", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+    {name: "Guild 3", realm: "Blackrock", faction: "Horde", img_url: "https://i.pinimg.com/originals/43/d2/60/43d26064313e583249b17554524b808b.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+    {name: "Guild 4", realm: "Alexstrasza", faction: "Alliance", img_url: "https://img.wallpapersafari.com/phone/640/1136/20/28/59Br0M.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+    {name: "Guild 5", realm: "Anvilmar", faction: "Alliance", img_url: "https://img.wallpapersafari.com/phone/640/1136/20/28/59Br0M.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+    {name: "Guild 6", realm: "Moon Gaurd", faction: "Alliance", img_url: "https://img.wallpapersafari.com/phone/640/1136/20/28/59Br0M.jpg", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
     ]
 
     guilds.each {|guild| Guild.create(guild)}
@@ -28,8 +31,9 @@ users = [
     users.each {|user| User.create(user)}
 
     applications = [
-        {content: "Apply HERE!!", user_id: 1}
+        {user_id: 1, content: "Apply HERE!!", guild_id: Guild.all.sample.id }
     ]
     applications.each {|application| Application.create(application)}
 
     puts "reseeded!"
+
